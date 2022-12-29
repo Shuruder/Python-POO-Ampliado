@@ -8,7 +8,7 @@ class Pessoa:
         self.nome = nome
         self.idade = idade
 
-    @classmethod
+    @classmethod        #   Desse modo temos uma referencia direta para a classe para não instanciar 2 pessoas
     def criar_de_data_nascimento(cls, ano, mes, dia, nome):
         idade = 2022 - ano
         return cls(nome, idade)
@@ -23,3 +23,6 @@ print(p.nome, p.idade)
 
 print(Pessoa.e_maior_idade(18))
 print(Pessoa.e_maior_idade(8))
+
+#   Outra forma de aplicação, funcional
+#   print(p.e_maior_idade(p.idade))
