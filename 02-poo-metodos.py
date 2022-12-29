@@ -11,11 +11,11 @@ class Pessoa:
     @classmethod        #   Desse modo temos uma referencia direta para a classe para não instanciar 2 pessoas
     def criar_de_data_nascimento(cls, ano, mes, dia, nome):
         idade = 2022 - ano
-        return cls(nome, idade)
+        return cls(nome, idade)     #   Eu preciso de acesso ao contexto da classe, então utilize o metodo de classe (cls)
 
     @staticmethod
     def e_maior_idade(idade):
-        return idade >= 18
+        return idade >= 18          #   Não preciso do contexto e nem de classe e nem instancia do objeto, então utilize o metodo estático
 
 
 p = Pessoa.criar_de_data_nascimento(1994, 9, 7, "Gabriel")
